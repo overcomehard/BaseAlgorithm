@@ -16,9 +16,9 @@ void find_row_col(int n, int m, int &row, int &col)
 		layer_end += 4 * (n - (i-1)*2 - 1);
 		if (m <= layer_end) {
 			//确定边
-			int side = ((m-1) - layer_start + 1) / (n - (i - 1) * 2 - 1);
+			int side = (m - layer_start) / (n - (i - 1) * 2 - 1);
 			//确定所在边的具体位置
-			int seat = ((m-1) - layer_start + 1) % (n - (i - 1) * 2 - 1) + 1;
+			int seat = (m - layer_start) % (n - (i - 1) * 2 - 1) + 1;
 			if (side == 0) {
 				row = i;  // 第i行
 				col = seat + i - 1;
