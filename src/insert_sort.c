@@ -4,6 +4,8 @@
 // 顺序表方式实现
 void insert_sort(int *array, int n)
 {
+    if (n <= 1)
+        return;
 	// 为什么从1开始呢?
 	for (int i = 1; i < n; ++i)
 	{
