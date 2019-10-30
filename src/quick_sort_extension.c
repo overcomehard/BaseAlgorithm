@@ -6,9 +6,8 @@
 void quick_sort(int *array, int left, int right, bool(*compare)(int, int, bool))
 {
     if (left >= right)  //结速条件
-    {
         return;
-    }
+
     int i = left;
     int j = right;
     int key = array[left];
