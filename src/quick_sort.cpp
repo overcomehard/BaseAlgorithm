@@ -29,6 +29,11 @@ void quick_sort(int *array, int left, int right)
 	quick_sort(array, i + 1, right);
 }
 
+void quick_sort(int *array, int n)
+{
+    quick_sort(array, 0, n-1);
+}
+
 int main()
 {
 	int array[10];
@@ -42,7 +47,7 @@ int main()
 		std::cout << array[i] << ", ";
 	std::cout << std::endl;
 
-	quick_sort(array, 0, 9);
+	quick_sort(array, 10);
 
 	std::cout << "排序后: ";
 	for (int i = 0; i<10; i++)
